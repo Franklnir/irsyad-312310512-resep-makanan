@@ -1,0 +1,122 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFE3A1">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recipe_card1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="389dp"
+            android:layout_height="769dp"
+            android:background="#FFEFD6"
+            android:padding="16dp">
+
+
+            <ImageView
+                android:id="@+id/img_recipe1"
+                android:layout_width="350dp"
+                android:layout_height="137dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/satepadang"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.769"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_ingredients1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Bahan-Bahan:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.057"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_recipe1" />
+
+
+            <TextView
+                android:id="@+id/tv_ingredients_list1"
+                android:layout_width="340dp"
+                android:layout_height="166dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text="                                    sate Padang\n\n- 500 gram daging sapi (sandung lamur), potong kotak\n
+- 5 sdm tepung beras, larutkan dengan 200 ml air\n
+- 1 liter air kaldu sapi\n
+- 2 batang serai, memarkan\n
+- 5 lembar daun jeruk\n
+- 2 lembar daun kunyit, simpulkan\n
+- Garam secukupnya\n
+\n
+Bumbu Halus:\n
+- 5 siung bawang putih\n
+- 8 butir bawang merah\n
+- 2 cm jahe\n
+- 2 cm kunyit\n
+- 5 buah cabai merah keriting\n
+- 1 sdt ketumbar\n
+- 1/2 sdt jinten\n
+- 1/2 sdt lada putih\n
+- 2 butir kemiri
+"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.333"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ingredients1" />
+
+            <TextView
+                android:id="@+id/tv_steps_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="36dp"
+                android:text="Langkah-Langkah Memasak:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ingredients_list1" />
+
+            <TextView
+                android:id="@+id/tv_steps_list"
+                android:layout_width="332dp"
+                android:layout_height="179dp"
+                android:layout_marginTop="4dp"
+                android:text="1. Haluskan semua bahan bumbu halus.\n2. Tumis bumbu halus bersama serai, daun jeruk, dan daun kunyit hingga harum.
+\n3. Masukkan potongan daging, aduk hingga berubah warna.
+\n4. Tuang air kaldu, masak hingga daging empuk.
+\n5. Larutkan tepung beras, masukkan ke dalam kuah sambil diaduk hingga mengental.
+\n6. Tusukkan daging pada tusuk sate.
+\n7. Panggang sate hingga harum dan sedikit kecokelatan.
+\n8. Sajikan sate padang bersama kuah kental."
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_steps_title"
+                app:layout_constraintVertical_bias="0.09" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

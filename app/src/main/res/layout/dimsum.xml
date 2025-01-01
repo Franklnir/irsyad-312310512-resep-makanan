@@ -1,0 +1,117 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFE3A1">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recipe_card1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="389dp"
+            android:layout_height="769dp"
+            android:background="#FFEFD6"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/img_recipe1"
+                android:layout_width="370dp"
+                android:layout_height="142dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/dimsumjamur"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_ingredients1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Bahan-Bahan:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.057"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_recipe1" />
+
+
+            <TextView
+                android:id="@+id/tv_ingredients_list1"
+                android:layout_width="340dp"
+                android:layout_height="166dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text="                         Dimsum Jamur Vegetarian\n\n- 200 gram jamur shiitake, cincang halus\n
+- 150 gram jamur kuping, cincang halus\n
+- 100 gram tepung terigu\n
+- 50 gram tepung tapioka\n
+- 2 sdm minyak wijen\n
+- 1 sdm kecap asin\n
+- 1 sdm minyak zaitun\n
+- 2 batang daun bawang, cincang halus\n
+- 1 sdt garam\n
+- 1/2 sdt merica bubuk\n
+- 1/2 sdt kaldu jamur bubuk\n
+\n
+Untuk Kulit Dimsum:\n
+- 200 gram tepung terigu\n
+- 1/2 sdt garam\n
+- 100 ml air panas"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.333"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ingredients1" />
+
+
+            <TextView
+                android:id="@+id/tv_steps_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="36dp"
+                android:text="Langkah-Langkah Memasak:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ingredients_list1" />
+
+            <TextView
+                android:id="@+id/tv_steps_list"
+                android:layout_width="332dp"
+                android:layout_height="179dp"
+                android:layout_marginTop="4dp"
+                android:text="1. Campurkan semua bahan isian dalam sebuah mangkuk besar.\n
+2. Aduk rata hingga adonan bisa dipulung dan tidak terlalu basah.\n
+3. Siapkan kulit dimsum, ambil sejumput adonan isian dan letakkan di tengah kulit dimsum.\n
+4. Lipat kulit dimsum dan rapatkan ujung-ujungnya.\n
+5. Kukus dimsum selama 20-25 menit hingga matang.\n
+6. Sajikan dimsum jamur vegetarian dengan saus sambal atau kecap asin."
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.2"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_steps_title"
+                app:layout_constraintVertical_bias="0.09" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
