@@ -1,0 +1,96 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFE3A1">
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recipe_card1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="1392dp"
+            android:background="#FFEFD6"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/img_recipe1"
+                android:layout_width="401dp"
+                android:layout_height="187dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/talasbogor"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_ingredients1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Bahan-Bahan:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.057"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_recipe1" />
+
+
+            <TextView
+                android:id="@+id/tv_ingredients_list1"
+                android:layout_width="329dp"
+                android:layout_height="230dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text="- 250 gram talas Bogor, kukus dan haluskan\n\n- 200 gram tepung terigu serbaguna\n\n- 200 gram gula pasir\n\n- 4 butir telur\n\n- 200 gram margarin, lelehkan\n\n- 1 sdt baking powder\n\n- 1 sdt vanili bubuk\n\n- 50 ml susu cair\n\n- Pewarna ungu secukupnya (opsional)\n"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.333"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ingredients1" />
+
+
+            <TextView
+                android:id="@+id/tv_steps_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="20dp"
+                android:text="Langkah-Langkah Membuat:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ingredients_list1" />
+
+            <TextView
+                android:id="@+id/tv_steps_list"
+                android:layout_width="316dp"
+                android:layout_height="313dp"
+                android:layout_marginTop="56dp"
+                android:text="1. Kocok telur dan gula hingga mengembang dan berwarna putih pucat.\n\n2. Tambahkan margarin leleh, susu cair, dan talas yang sudah dihaluskan. Aduk rata.\n\n3. Masukkan tepung terigu, baking powder, dan vanili bubuk sedikit demi sedikit sambil diaduk perlahan.\n\n4. Tambahkan pewarna ungu jika diinginkan untuk mempercantik warna bolu.\n\n5. Tuang adonan ke dalam loyang yang sudah diolesi margarin dan dialasi kertas roti.\n\n6. Panggang dalam oven dengan suhu 180°C selama 30-40 menit atau hingga matang.\n\n7. Angkat dan dinginkan sebelum disajikan."
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.488"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_ingredients_list1" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

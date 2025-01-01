@@ -1,0 +1,114 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFE3A1">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recipe_card_thai"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="389dp"
+            android:layout_height="769dp"
+            android:background="#FFEFD6"
+            android:padding="16dp">
+
+            <ImageView
+                android:id="@+id/img_recipe_thai"
+                android:layout_width="371dp"
+                android:layout_height="147dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/nasigoreng"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_ingredients_thai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Bahan-Bahan:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.057"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_recipe_thai" />
+
+            <TextView
+                android:id="@+id/tv_ingredients_list_thai"
+                android:layout_width="336dp"
+                android:layout_height="154dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="4dp"
+                android:text="                      Resep nasi goreng Thailand\n\n- 2 porsi nasi putih (dingin lebih baik)\n
+- 2 butir telur\n
+- 200 gram udang kupas\n
+- 3 siung bawang putih, cincang halus\n
+- 1 batang daun bawang, iris halus\n
+- 2 sdm kecap ikan\n
+- 1 sdm saus tiram\n
+- 1 sdm kecap manis\n
+- 1/2 sdt gula\n
+- 1 buah jeruk nipis\n
+- Minyak goreng secukupnya\n
+- Irisan cabai dan ketimun untuk garnish
+"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.333"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ingredients_thai" />
+
+            <TextView
+                android:id="@+id/tv_steps_title_thai"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="28dp"
+                android:text="Langkah-Langkah Memasak:"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ingredients_list_thai" />
+
+            <TextView
+                android:id="@+id/tv_steps_list_thai"
+                android:layout_width="332dp"
+                android:layout_height="179dp"
+                android:layout_marginTop="4dp"
+                android:text="1. Panaskan minyak di wajan, tumis bawang putih hingga harum.\n
+2. Masukkan udang, masak hingga berubah warna.\n
+3. Geser udang ke sisi wajan, lalu masukkan telur dan orak-arik.\n
+4. Tambahkan nasi putih, aduk rata.\n
+5. Masukkan kecap ikan, saus tiram, kecap manis, dan gula. Aduk rata.\n
+6. Tambahkan daun bawang, aduk sebentar.\n
+7. Sajikan dengan perasan jeruk nipis, irisan cabai, dan ketimun.
+."
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.48"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_steps_title_thai"
+                app:layout_constraintVertical_bias="0.0" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

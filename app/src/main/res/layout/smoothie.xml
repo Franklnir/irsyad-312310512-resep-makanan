@@ -1,0 +1,108 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#F1E5D8"> <!-- Background soft beige for premium look -->
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/recipe_card1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="389dp"
+            android:layout_height="769dp"
+            android:background="#F9F3EB"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/img_recipe1"
+                android:layout_width="384dp"
+                android:layout_height="203dp"
+                android:layout_marginTop="4dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/smoothiee"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_ingredients1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Bahan-Bahan:"
+                android:textColor="#4A4A4A"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/img_recipe1" />
+
+            <TextView
+                android:id="@+id/tv_ingredients_list1"
+                android:layout_width="340dp"
+                android:layout_height="166dp"
+                android:layout_marginTop="12dp"
+                android:text="                         Smoothie Stroberi Premium\n\n- 200 gram stroberi segar\n
+    - 100 ml susu almond (untuk rasa lebih creamy)\n
+    - 1 sdm madu premium\n
+    - 1/2 sdt ekstrak vanili asli\n
+    - 4-5 buah es batu\n
+    - 1 sdm yogurt Yunani untuk kelembutan ekstra\n
+    - Daun mint segar untuk topping\n
+    - Potongan stroberi untuk topping"
+                android:textColor="#4A4A4A"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.489"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ingredients1" />
+
+            <TextView
+                android:id="@+id/tv_steps_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Langkah-Langkah Membuat:"
+                android:textColor="#4A4A4A"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_ingredients_list1" />
+
+            <TextView
+                android:id="@+id/tv_steps_list"
+                android:layout_width="332dp"
+                android:layout_height="179dp"
+                android:layout_marginTop="4dp"
+                android:text="1. Cuci bersih stroberi dan potong kecil-kecil.\n2. Masukkan stroberi, susu almond, madu premium, ekstrak vanili, yogurt Yunani, dan es batu ke dalam blender.\n
+    3. Blender semua bahan hingga halus dan tercampur rata.\n
+    4. Tuang ke dalam gelas dan beri topping potongan stroberi serta daun mint segar.\n
+    5. Smoothie premium siap dinikmati dengan sensasi rasa yang lembut dan segar."
+                android:textColor="#4A4A4A"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.421"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_steps_title"
+                app:layout_constraintVertical_bias="0.083" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

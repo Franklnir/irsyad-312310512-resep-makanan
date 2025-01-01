@@ -1,0 +1,98 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F3CE71"
+    android:padding="16dp">
+
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="394dp"
+        android:layout_height="714dp"
+        android:alpha="1"
+        android:scaleType="centerCrop"
+        android:src="@drawable/rotigandum"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.941"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.146" />
+
+    <ImageView
+        android:id="@+id/img_recipe1"
+        android:layout_width="334dp"
+        android:layout_height="151dp"
+        android:layout_marginTop="44dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bread"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <TextView
+        android:id="@+id/tv_ingredients1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#80FFFFFF"
+        android:text="Bahan-Bahan:"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.602"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/img_recipe1" />
+
+    <TextView
+        android:id="@+id/tv_ingredients_list1"
+        android:layout_width="196dp"
+        android:layout_height="115dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:background="#80FFFFFF"
+        android:gravity="start"
+        android:text="- 2 cangkir tepung gandum utuh\n- 1 sdm ragi instan\n- 1 sdm gula pasir\n- 1 sdt garam\n- 1 cangkir air hangat\n- 2 sdm minyak zaitun"
+        android:textColor="#131313"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.811"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ingredients1" />
+
+    <TextView
+        android:id="@+id/tv_steps_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="124dp"
+        android:layout_marginTop="8dp"
+        android:background="#80FFFFFF"
+        android:text="Langkah-Langkah Membuat:"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_ingredients_list1" />
+
+    <TextView
+        android:id="@+id/tv_steps_list"
+        android:layout_width="261dp"
+        android:layout_height="205dp"
+        android:layout_marginTop="4dp"
+        android:background="#80FFFFFF"
+        android:text="1. Campur tepung, ragi, dan gula dalam mangkuk besar.\n2. Tambahkan air hangat dan minyak zaitun, aduk hingga adonan kalis.\n3. Diamkan selama 1 jam hingga adonan mengembang dua kali lipat.\n4. Uleni adonan, lalu bentuk menjadi bulatan.\n5. Panggang dalam oven dengan suhu 180°C selama 30 menit.\n6. Angkat, dan dinginkan sebelum disajikan."
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.926"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_steps_title"
+        app:layout_constraintVertical_bias="0.0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
