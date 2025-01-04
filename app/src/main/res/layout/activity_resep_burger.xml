@@ -1,6 +1,5 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="16dp"
@@ -81,8 +80,8 @@
 
             <TextView
                 android:id="@+id/tv_steps_list"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_width="339dp"
+                android:layout_height="266dp"
                 android:layout_marginTop="4dp"
                 android:text="1. Campurkan daging sapi cincang dengan telur, garam, dan lada.\n2. Bentuk adonan menjadi bulatan pipih seperti patty.\n3. Panaskan sedikit minyak di wajan, lalu masak patty hingga matang.\n4. Siapkan roti burger, beri daun selada, irisan tomat, dan patty di atasnya.\n5. Tambahkan keju slice jika diinginkan.\n6. Beri saus tomat dan mayones sesuai selera.\n7. Tutup dengan roti atas dan burger siap disajikan."
                 android:textColor="#000000"

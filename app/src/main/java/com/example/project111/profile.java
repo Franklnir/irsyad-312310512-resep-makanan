@@ -99,7 +99,6 @@ public class profile extends AppCompatActivity {
         // Logout button listener with confirmation
         btnLogout.setOnClickListener(v -> {
             new androidx.appcompat.app.AlertDialog.Builder(profile.this)
-                    .setTitle("Logout Confirmation")
                     .setMessage("yakin ingin logout?")
                     .setPositiveButton("Yes", (dialog, which) -> {
                         // Clear shared preferences and redirect to login
