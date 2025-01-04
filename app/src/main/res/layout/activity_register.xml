@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/logingambar" />
+        android:src="@drawable/gambar5" />
 
 
     <LinearLayout
@@ -51,6 +51,7 @@
             android:drawablePadding="10dp"
             android:background="#7EFFFFFF"
             android:hint="Username"
+            android:textStyle="bold"
             android:minHeight="48dp" />
 
 
@@ -73,9 +74,11 @@
             android:drawableStart="@drawable/password"
             android:drawablePadding="10dp"
             android:hint="Password"
+            android:textStyle="bold"
             android:background="#76FFFFFF"
             android:inputType="textPassword"
             android:minHeight="48dp" />
+
 
 
         <TextView
@@ -95,6 +98,7 @@
             android:layout_marginHorizontal="25dp"
             android:layout_marginTop="8dp"
             android:hint="konfirmasi password"
+            android:textStyle="bold"
             android:background="#7CFFFFFF"
             android:minHeight="48dp" />
 
@@ -117,6 +121,7 @@
             android:layout_marginTop="8dp"
             android:drawableStart="@drawable/ic_baseline_smartphone_24"
             android:hint="Nomor HP"
+            android:textStyle="bold"
             android:background="#73FFFFFF"
             android:inputType="phone"
             android:minHeight="48dp" />
@@ -129,6 +134,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             android:backgroundTint="#FF574B"
+            android:textStyle="bold"
             android:text="Register" />
     </LinearLayout>
 
