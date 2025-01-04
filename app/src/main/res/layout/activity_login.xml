@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/logingambar" />
+        android:src="@drawable/gambar5" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,7 +47,7 @@
             android:layout_marginTop="9dp"
             android:drawableStart="@drawable/name"
             android:drawablePadding="16dp"
-            android:background="#85FFFFFF"
+            android:background="#AAFFFFFF"
             android:hint="Username"
             android:minHeight="48dp" />
 
@@ -70,9 +70,10 @@
             android:drawableStart="@drawable/password"
             android:drawablePadding="16dp"
             android:hint="Password"
-            android:background="#7AFFFFFF"
+            android:background="#A9FFFFFF"
             android:inputType="textPassword"
             android:minHeight="48dp" />
+
 
         <Button
             android:id="@+id/btnLogin"
@@ -81,6 +82,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
             android:backgroundTint="#FF574B"
+            android:textStyle="bold"
             android:text="Login" />
 
         <TextView
@@ -90,6 +92,7 @@
             android:layout_marginTop="16dp"
             android:text="Belum punya akun?"
             android:textColor="@android:color/white"
+            android:textStyle="bold"
             android:textSize="15sp" />
 
         <Button
@@ -99,6 +102,7 @@
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
             android:backgroundTint="#FF574B"
+            android:textStyle="bold"
             android:text="Register" />
     </LinearLayout>
 </FrameLayout>

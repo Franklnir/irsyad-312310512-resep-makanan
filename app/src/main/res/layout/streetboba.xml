@@ -5,7 +5,6 @@
     android:padding="16dp"
     android:background="#FFE3A1">
 
-
     <androidx.cardview.widget.CardView
         android:id="@+id/recipe_card1"
         android:layout_width="0dp"
@@ -17,81 +16,77 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="389dp"
-            android:layout_height="769dp"
-            android:background="#FFEFD6"
-            android:padding="16dp">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            <ImageView
-                android:id="@+id/img_recipe1"
-                android:layout_width="401dp"
-                android:layout_height="187dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/streetboba"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="1.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/tv_ingredients1"
-                android:layout_width="wrap_content"
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="20dp"
-                android:text="Bahan-Bahan:"
-                android:textColor="#000000"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.057"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/img_recipe1" />
+                android:background="#FFEFD6"
+                android:padding="16dp">
 
+                <ImageView
+                    android:id="@+id/img_recipe1"
+                    android:layout_width="match_parent"
+                    android:layout_height="200dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/streetboba"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                android:id="@+id/tv_ingredients_list1"
-                android:layout_width="340dp"
-                android:layout_height="166dp"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="4dp"
-                android:text="                         Street Boba Ala Cafe\n\n- 1 liter susu segar\n- 200 gram gula merah, iris halus\n- 50 gram boba instan, rebus sesuai petunjuk\n- 3 sdm air matang\n- 1 sdt bubuk teh hitam (opsional)\n- Es batu secukupnya\n"
-                android:textColor="#000000"
-                android:textSize="14sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.333"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_ingredients1" />
+                <TextView
+                    android:id="@+id/tv_ingredients1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="Bahan-Bahan:"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/img_recipe1" />
 
+                <TextView
+                    android:id="@+id/tv_ingredients_list1"
+                    android:layout_width="338dp"
+                    android:layout_height="222dp"
+                    android:layout_marginTop="8dp"
+                    android:text="        Street Boba Ala Cafe:\n\n- 1 liter susu segar full cream\n- 200 gram gula merah, iris halus\n- 50 gram boba instan (atau buat sendiri dengan tepung tapioka)\n- 3 sdm air matang untuk membuat sirup gula\n- 1 sdt bubuk teh hitam (opsional)\n- Es batu secukupnya untuk penyajian\n\nTambahan opsional:\n- 1 sdt ekstrak vanila untuk rasa manis ekstra\n- 1/4 sdt garam untuk menyeimbangkan rasa manis\n"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_ingredients1" />
 
-            <TextView
-                android:id="@+id/tv_steps_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:layout_marginTop="36dp"
-                android:text="Langkah-Langkah Membuat:"
-                android:textColor="#000000"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_ingredients_list1" />
+                <TextView
+                    android:id="@+id/tv_steps_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:text="Langkah-Langkah Membuat:"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_ingredients_list1" />
 
-            <TextView
-                android:id="@+id/tv_steps_list"
-                android:layout_width="332dp"
-                android:layout_height="179dp"
-                android:layout_marginTop="4dp"
-                android:text="1. Rebus boba instan sesuai petunjuk pada kemasan hingga mengembang dan kenyal.\n2. Panaskan gula merah bersama 3 sdm air hingga larut, lalu sisihkan.\n3. Siapkan gelas saji, tambahkan boba rebus dan sirup gula merah.\n4. Tuangkan susu segar yang sudah dingin ke dalam gelas, tambahkan bubuk teh hitam jika diinginkan.\n5. Tambahkan es batu sesuai selera, aduk rata, dan sajikan."
-                android:textColor="#000000"
-                android:textSize="14sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.2"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/tv_steps_title"
-                app:layout_constraintVertical_bias="0.09" />
+                <TextView
+                    android:id="@+id/tv_steps_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="1. Siapkan semua bahan dengan benar. Pastikan boba sudah direbus sesuai petunjuk hingga kenyal.\n\n2. Panaskan gula merah dengan 3 sdm air hingga larut sepenuhnya dan membentuk sirup kental. Tambahkan sedikit ekstrak vanila untuk aroma.\n\n3. Rebus susu segar dengan api kecil (jangan sampai mendidih) jika Anda ingin menyajikan versi hangat. Untuk versi dingin, biarkan susu tetap dalam kondisi dingin.\n\n4. Ambil gelas saji, masukkan boba yang telah direbus ke bagian dasar gelas. Tambahkan sirup gula merah di atasnya sesuai selera.\n\n5. Tuangkan susu segar ke dalam gelas perlahan-lahan. Tambahkan bubuk teh hitam jika Anda ingin rasa teh yang ringan.\n\n6. Masukkan es batu secukupnya untuk minuman dingin. Aduk perlahan agar semua bahan tercampur rata.\n\n7. Street Boba Ala Cafe siap dinikmati! Hidangkan dengan sedotan besar agar lebih mudah meminum boba.\n"
+                    android:textColor="#000000"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_steps_title" />
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </ScrollView>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/item_background"
+    android:background="@drawable/gambar6"
     android:orientation="vertical"
     android:gravity="center"
     android:padding="16dp">
@@ -20,6 +20,8 @@
         android:visibility="gone" />
 
     <!-- ImageView to display an image -->
+
+    <!-- Button to continue -->
     <ImageView
         android:id="@+id/centerImage"
         android:layout_width="114dp"
@@ -28,7 +30,6 @@
         android:contentDescription="Gambar tengah"
         android:src="@drawable/burger" />
 
-    <!-- Button to continue -->
     <Button
         android:id="@+id/btnSaveDevice"
         android:layout_width="wrap_content"
@@ -49,8 +50,8 @@
         android:gravity="center"
         android:paddingHorizontal="24dp"
         android:text="Nikmati setiap gigitan dengan rasa yang istimewa!"
-        android:textColor="#5D4037"
-        android:textSize="16sp"
+        android:textColor="#5F4816"
+        android:textSize="20sp"
         android:textStyle="bold|italic" />
 
 </LinearLayout>
