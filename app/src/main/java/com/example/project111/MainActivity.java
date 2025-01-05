@@ -78,7 +78,8 @@ public class MainActivity extends AppCompatActivity {
     private void setupSearchFunctionality() {
         searchBar.addTextChangedListener(new TextWatcher() {
             @Override
-            public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {}
+            public void beforeTextChanged(CharSequence charSequence, int start, int count, int after) {
+            }
 
             @Override
             public void onTextChanged(CharSequence charSequence, int start, int before, int count) {
@@ -87,29 +88,71 @@ public class MainActivity extends AppCompatActivity {
             }
 
             @Override
-            public void afterTextChanged(Editable editable) {}
+            public void afterTextChanged(Editable editable) {
+            }
         });
     }
 
     private void filterItemsBySearch(String query) {
         saveScrollPosition();
+
+        // Membuat list rekomendasi berdasarkan pencarian
+        boolean hasMatch = false;
+
         burgerItem.setVisibility(query.contains("burger") ? View.VISIBLE : View.GONE);
+        hasMatch = hasMatch || query.contains("burger");
+
         rendangItem.setVisibility(query.contains("rendang") ? View.VISIBLE : View.GONE);
-        susuGandumItem.setVisibility(query.contains("susu gandum") ? View.VISIBLE : View.GONE);
-        rotiGandumItem.setVisibility(query.contains("roti gandum") ? View.VISIBLE : View.GONE);
-        satePadangItem.setVisibility(query.contains("sate padang") ? View.VISIBLE : View.GONE);
-        nasiGorengItem.setVisibility(query.contains("nasi goreng") ? View.VISIBLE : View.GONE);
-        dimsumItem.setVisibility(query.contains("dimsum jamur") ? View.VISIBLE : View.GONE);
+        hasMatch = hasMatch || query.contains("rendang");
+
+        susuGandumItem.setVisibility(query.contains("susu") ? View.VISIBLE : View.GONE);
+        hasMatch = hasMatch || query.contains("susu gandum");
+
+        rotiGandumItem.setVisibility(query.contains("roti") ? View.VISIBLE : View.GONE);
+        hasMatch = hasMatch || query.contains("roti gandum");
+
+        satePadangItem.setVisibility(query.contains("sate") ? View.VISIBLE : View.GONE);
+        hasMatch = hasMatch || query.contains("sate padang");
+
+        nasiGorengItem.setVisibility(query.contains("nasi") ? View.VISIBLE : View.GONE);
+        hasMatch = hasMatch || query.contains("nasi goreng");
+
+        dimsumItem.setVisibility(query.contains("dimsum") ? View.VISIBLE : View.GONE);
+        hasMatch = hasMatch || query.contains("dimsum jamur");
+
         smoothieItem.setVisibility(query.contains("smoothie") ? View.VISIBLE : View.GONE);
-        ayamBowlItem.setVisibility(query.contains("ayam bowl") ? View.VISIBLE : View.GONE);
+        hasMatch = hasMatch || query.contains("smoothie");
+
+        ayamBowlItem.setVisibility(query.contains("ayam") ? View.VISIBLE : View.GONE);
+        hasMatch = hasMatch || query.contains("ayam bowl");
+
         tumisItem.setVisibility(query.contains("tumis") ? View.VISIBLE : View.GONE);
-        capcayItem.setVisibility(query.contains("capcay") ? View.VISIBLE : View.GONE); // Show Capcay item
-        streetBobaItem.setVisibility(query.contains("street boba") ? View.VISIBLE : View.GONE); // Show StreetBoba item
-        boluLapisItem.setVisibility(query.contains("Talas Bogor") ? View.VISIBLE : View.GONE); // Show BoluLapis item
-        bakpaoItem.setVisibility(query.contains("bakpao") ? View.VISIBLE : View.GONE); // Show Bakpao item
+        hasMatch = hasMatch || query.contains("tumis");
+
+        capcayItem.setVisibility(query.contains("capcay") ? View.VISIBLE : View.GONE);
+        hasMatch = hasMatch || query.contains("capcay");
+
+        streetBobaItem.setVisibility(query.contains("boba") ? View.VISIBLE : View.GONE);
+        hasMatch = hasMatch || query.contains("street boba");
+
+        boluLapisItem.setVisibility(query.contains("bolu") ? View.VISIBLE : View.GONE);
+        hasMatch = hasMatch || query.contains("bolu lapis");
+
+        bakpaoItem.setVisibility(query.contains("bakpao") ? View.VISIBLE : View.GONE);
+        hasMatch = hasMatch || query.contains("bakpao");
+
+        // Menampilkan rekomendasi jika tidak ada hasil pencarian
+        if (!hasMatch && !query.isEmpty()) {
+
+        } else if (query.isEmpty()) {
+            // Reset jika query kosong
+            resetAllItems();
+        }
 
         restoreScrollPosition();
     }
+
+
 
     private void setupButtonFilters() {
         spicyButton.setOnClickListener(v -> {
@@ -197,10 +240,53 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        new AlertDialog.Builder(this)
-                .setMessage("Yah, ingin keluar ya?")
-                .setPositiveButton("Iya", (dialog, which) -> finish())
-                .setNegativeButton("Tidak", null)
-                .show();
+        if (!searchBar.getText().toString().isEmpty() || isFiltered()) {
+            // Reset tampilan ke awal tanpa dialog
+            resetAllItems();
+        } else {
+            // Konfirmasi keluar aplikasi
+            new AlertDialog.Builder(this)
+                    .setMessage("Yah, ingin keluar ya?")
+                    .setPositiveButton("Iya", (dialog, which) -> finish())
+                    .setNegativeButton("Tidak", null)
+                    .show();
+        }
+    }
+
+    // Fungsi untuk memeriksa apakah tampilan sedang difilter
+    private boolean isFiltered() {
+        return burgerItem.getVisibility() == View.GONE ||
+                rendangItem.getVisibility() == View.GONE ||
+                susuGandumItem.getVisibility() == View.GONE ||
+                rotiGandumItem.getVisibility() == View.GONE ||
+                satePadangItem.getVisibility() == View.GONE ||
+                nasiGorengItem.getVisibility() == View.GONE ||
+                dimsumItem.getVisibility() == View.GONE ||
+                smoothieItem.getVisibility() == View.GONE ||
+                ayamBowlItem.getVisibility() == View.GONE ||
+                tumisItem.getVisibility() == View.GONE ||
+                capcayItem.getVisibility() == View.GONE ||
+                streetBobaItem.getVisibility() == View.GONE ||
+                boluLapisItem.getVisibility() == View.GONE ||
+                bakpaoItem.getVisibility() == View.GONE;
+    }
+
+    // Fungsi untuk mereset tampilan ke kondisi awal
+    private void resetAllItems() {
+        burgerItem.setVisibility(View.VISIBLE);
+        rendangItem.setVisibility(View.VISIBLE);
+        susuGandumItem.setVisibility(View.VISIBLE);
+        rotiGandumItem.setVisibility(View.VISIBLE);
+        satePadangItem.setVisibility(View.VISIBLE);
+        nasiGorengItem.setVisibility(View.VISIBLE);
+        dimsumItem.setVisibility(View.VISIBLE);
+        smoothieItem.setVisibility(View.VISIBLE);
+        ayamBowlItem.setVisibility(View.VISIBLE);
+        tumisItem.setVisibility(View.VISIBLE);
+        capcayItem.setVisibility(View.VISIBLE);
+        streetBobaItem.setVisibility(View.VISIBLE);
+        boluLapisItem.setVisibility(View.VISIBLE);
+        bakpaoItem.setVisibility(View.VISIBLE);
+
     }
 }
