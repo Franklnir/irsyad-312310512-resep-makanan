@@ -1,5 +1,6 @@
 # penjalasan berupa story board dari resep aplikasi 
-![Untitled](https://github.com/user-attachments/assets/473527c5-e454-468f-b70d-64d02cc4c477)
+![figma desain](https://github.com/user-attachments/assets/3f7d5014-5075-409c-90d1-79970deb2f79)
+
 ![Regis4](https://github.com/user-attachments/assets/3fb85382-302f-44e1-aa59-5da53533dd94)
 
 
@@ -10,7 +11,7 @@ o	Kolom input: Username dan Password.
 o	Tombol: LOGIN dan Register.
 o	Tautan: belom punya akun?.
 •	Desain: Latar bertema makanan dengan tata letak sederhana untuk kolom input.
-•	Catatan: Pengguna memasukkan detail login untuk mengakses aplikasi.
+•	Catatan: setelah pengguna login maka akan menekan tombol lanjut untuk memasukin menu utama.
 
 2. Layar Registrasi
 •	Deskripsi: Tampilan untuk pengguna baru mendaftar akun.
@@ -51,9 +52,9 @@ o	Instruksi: Langkah-langkah membuat, mulai dari mencampur, mendiamkan, membentu
 7. Layar Profil
 •	Deskripsi: Halaman profil pengguna untuk melihat atau mengelola informasi akun dan melihat data register.
 •	Elemen:
-o	Kolom Informasi: Menampilkan username, dan nomor HP.
-o	Tombol: Logout, Help me dan request resep.
-(tombol logout akan menghapus data register dan keluar), (tombol help me akan mengarahkan ke whatstup admin), (tombol request resep akan ke whatsup untuk kerja sama dll)
+o	Kolom Informasi: Menampilkan username, password dan nomor HP.
+o	Tombol: Logout, Help me, logou dan save.
+(tombol logout akan menghapus data register dan keluar), (tombol help me akan mengarahkan ke whatstup admin), (tombol save untuk menyimpan perubahan data akun)
 •	Catatan: Memudahkan pengguna untuk mengelola informasi profil.
 pengguna bisa logout dan helpme melalui butoon di bawah
 
