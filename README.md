@@ -1,6 +1,7 @@
-# penjalasan berupa story board dari resep aplikasi 
+# penjalasan berupa story board UI dari resep aplikasi 
 ![figma desain](https://github.com/user-attachments/assets/3f7d5014-5075-409c-90d1-79970deb2f79)
-database
+database fireebase realtime :
+register pengguna akan tersimpan berserta informasi perangkat yang di gunakannya seperti di bawah ini
 ![image](https://github.com/user-attachments/assets/8cc9a7cb-b9e9-4225-8ec5-5e18255a4b0d)
 
 
@@ -57,10 +58,11 @@ o	Kolom Informasi: Menampilkan username, password dan nomor HP.
 o	Tombol: Logout, Help me, logou dan save.
 (tombol logout akan menghapus data register dan keluar), (tombol help me akan mengarahkan ke whatstup admin), (tombol save untuk menyimpan perubahan data akun)
 •	Catatan: Memudahkan pengguna untuk mengelola informasi profil.
-pengguna bisa logout dan helpme melalui butoon di bawah
+pengguna bisa logout dan helpme melalui butoon di bawah, pengguna bisa menegdit akun aplikasi menyimpannya
 
 Catatan 
 •	Tema khas Aplikasi: Menggunakan latar visual bertema makanan yang konsisten untuk pengalaman yang menarik dan intuitif.
 •	Penambahan Resep: Resep dalam aplikasi dapat terus diperbarui atau ditambah sesuai kebutuhan aja
+(( aplikasi bisa mendeteksi perangkat pengguna dan menyimpan informasi perangkat ))
 
 
