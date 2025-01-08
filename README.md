@@ -61,7 +61,7 @@ o	Tombol: Logout, Help me, logou dan save.
 pengguna bisa logout dan helpme melalui butoon di bawah, pengguna bisa menegdit akun aplikasi menyimpannya
 
 Catatan 
-•	Tema khas Aplikasi: Menggunakan latar visual bertema makanan yang konsisten untuk pengalaman yang menarik dan intuitif.
+•	Tema Aplikasi: Menggunakan latar visual bertema makanan untuk pengalaman yang menarik dan intuitif.
 •	Penambahan Resep: Resep dalam aplikasi dapat terus diperbarui atau ditambah sesuai kebutuhan aja
 # (( aplikasi bisa mendeteksi perangkat pengguna dan menyimpan informasi perangkat supaya ketika user keluar aplikasi lalu masuk aplikasi lagi tidak perlu login ulang tapi langsung di arahkan ke menu utama ))
 
