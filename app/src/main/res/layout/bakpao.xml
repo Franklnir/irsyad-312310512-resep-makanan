@@ -1,4 +1,6 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -6,7 +8,7 @@
     android:background="#FFE3A1">
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/recipe_card1"
+        android:id="@+id/recipe_card"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:cardCornerRadius="16dp"
@@ -20,49 +22,39 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <androidx.constraintlayout.widget.ConstraintLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="#FFEFD6"
-                android:padding="16dp">
+                android:padding="16dp"
+                android:orientation="vertical">
 
-                <!-- Gambar Resep -->
                 <ImageView
-                    android:id="@+id/img_recipe1"
+                    android:id="@+id/img_recipe"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/bakpao"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:src="@drawable/bakpao" />
 
-                <!-- Judul Bahan-Bahan -->
                 <TextView
-                    android:id="@+id/tv_ingredients1"
+                    android:id="@+id/tv_ingredients"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"
                     android:text="Bahan-Bahan:"
                     android:textColor="#000000"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/img_recipe1" />
+                    android:textStyle="bold" />
 
-                <!-- Daftar Bahan-Bahan -->
                 <TextView
-                    android:id="@+id/tv_ingredients_list1"
+                    android:id="@+id/tv_ingredients_list"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="4dp"
                     android:text="- 500 gram tepung terigu\n\n- 1 sdt ragi instan\n\n- 50 gram gula pasir\n\n- 1/2 sdt garam\n\n- 250 ml air hangat\n\n- 50 gram minyak goreng\n\n- 150 gram daging abon"
                     android:textColor="#000000"
-                    android:textSize="14sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_ingredients1" />
+                    android:textSize="14sp" />
 
-                <!-- Judul Langkah-Langkah -->
                 <TextView
                     android:id="@+id/tv_steps_title"
                     android:layout_width="wrap_content"
@@ -71,11 +63,8 @@
                     android:text="Langkah-Langkah Membuat:"
                     android:textColor="#000000"
                     android:textSize="18sp"
-                    android:textStyle="bold"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_ingredients_list1" />
+                    android:textStyle="bold" />
 
-                <!-- Langkah-Langkah -->
                 <TextView
                     android:id="@+id/tv_steps_list"
                     android:layout_width="match_parent"
@@ -83,11 +72,81 @@
                     android:layout_marginTop="4dp"
                     android:text="1. Campurkan tepung terigu, ragi instan, gula, dan garam dalam sebuah wadah.\n\n2. Tambahkan air hangat sedikit-sedikit, uleni hingga adonan kalis dan elastis.\n\n3. Diamkan adonan selama 1 jam hingga mengembang.\n\n4. Ambil sedikit adonan, pipihkan, dan beri daging abon di tengahnya, rapatkan dan bulatkan.\n\n5. Kukus bakpao selama 15-20 menit hingga matang.\n\n6. Sajikan bakpao isi abon hangat-hangat."
                     android:textColor="#000000"
-                    android:textSize="14sp"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/tv_steps_title" />
+                    android:textSize="14sp" />
 
-            </androidx.constraintlayout.widget.ConstraintLayout>
+                <EditText
+                    android:id="@+id/etComment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:drawable/editbox_background"
+                    android:hint="Tulis komentar..."
+                    android:minHeight="48dp"
+                    android:padding="10dp"
+                    android:layout_marginTop="16dp" />
+
+                <Button
+                    android:id="@+id/btnSubmitComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kirim"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="8dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvComments"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="8dp"
+                    android:background="@android:color/white">
+
+                    <TextView
+                        android:id="@+id/tvUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:text="Username" />
+
+                    <TextView
+                        android:id="@+id/tvCommentText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:text="Komentar pengguna"
+                        android:paddingTop="4dp"/>
+
+                    <TextView
+                        android:id="@+id/tvTimestamp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/darker_gray"
+                        android:text="Timestamp" />
+
+                    <Button
+                        android:id="@+id/btnReply"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Balas"
+                        android:layout_marginTop="4dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvReplies"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:nestedScrollingEnabled="false"
+                        android:layout_marginTop="8dp"/>
+                </LinearLayout>
+            </LinearLayout>
         </ScrollView>
     </androidx.cardview.widget.CardView>
 </androidx.constraintlayout.widget.ConstraintLayout>
+
+

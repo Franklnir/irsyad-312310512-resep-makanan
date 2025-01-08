@@ -11,9 +11,11 @@
         android:layout_width="100dp"
         android:layout_height="100dp"
         android:layout_gravity="center"
-        android:background="@drawable/nnn"
-        android:contentDescription="Profile Picture"
-        android:src="@drawable/nnn" />
+        android:src="@drawable/nnn"
+        android:scaleType="centerCrop"
+        android:background="@drawable/circle_background"
+        android:clipToOutline="true"
+        android:contentDescription="Profile Picture" />
 
 
     <TextView
@@ -40,8 +42,9 @@
             android:id="@+id/edit_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="#BFFFFFFF"
             android:hint="Nama Pengguna"
+            android:paddingStart="16dp"
+            android:background="@drawable/edittext_background"
             android:inputType="text"
             android:minHeight="48dp"
             android:textStyle="bold" />
@@ -56,13 +59,14 @@
 
             <EditText
                 android:id="@+id/edit_password"
-                android:layout_width="0dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#C3FFFFFF"
+                android:background="@drawable/edittext_background"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:minHeight="48dp"
+                android:paddingStart="16dp"
                 android:textStyle="bold" />
 
             <ImageView
@@ -80,8 +84,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:background="#BBFFFFFF"
             android:hint="Nomor Telepon"
+            android:paddingStart="16dp"
+            android:background="@drawable/edittext_background"
             android:inputType="phone"
             android:minHeight="48dp"
             android:textStyle="bold" />
@@ -103,6 +108,7 @@
                 android:layout_weight="1"
                 android:backgroundTint="#FB3F3F"
                 android:text="Logout"
+                android:background="@drawable/button_register_background"
                 android:textColor="@android:color/white"
                 android:textStyle="bold" />
 

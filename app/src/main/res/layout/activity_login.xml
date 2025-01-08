@@ -10,7 +10,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:src="@drawable/gambar5" />
+        android:src="@drawable/gambar5"
+        android:contentDescription="Background Image" /> <!-- Menambahkan deskripsi untuk aksesibilitas -->
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,10 +35,11 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginTop="20dp"
-            android:text="Username"
-            android:textColor="#FFE6E6"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:gravity="start"
+        android:text="Username"
+        android:textColor="#FFE6E6"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
         <EditText
             android:id="@+id/etUsername"
@@ -47,19 +49,23 @@
             android:layout_marginTop="9dp"
             android:drawableStart="@drawable/name"
             android:drawablePadding="16dp"
-            android:background="#AAFFFFFF"
+            android:paddingStart="16dp"
+            android:background="@drawable/edittext_background"
             android:hint="Username"
             android:minHeight="48dp" />
+
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="25dp"
             android:layout_marginTop="20dp"
-            android:text="Password"
-            android:textColor="#FAE8E8"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:gravity="start"
+        android:text="Password"
+        android:textColor="#FAE8E8"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
         <EditText
             android:id="@+id/etPassword"
@@ -70,20 +76,27 @@
             android:drawableStart="@drawable/password"
             android:drawablePadding="16dp"
             android:hint="Password"
-            android:background="#A9FFFFFF"
+            android:paddingStart="16dp"
+            android:background="@drawable/edittext_background"
             android:inputType="textPassword"
             android:minHeight="48dp" />
 
-
         <Button
             android:id="@+id/btnLogin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginHorizontal="25dp"
             android:layout_marginTop="20dp"
-            android:backgroundTint="#FF574B"
+            android:layout_gravity="center"
+            android:background="@drawable/button_background"
+            android:backgroundTint="@null"
+            android:text="Login"
+            android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:text="Login" />
+            android:textSize="16sp"
+            android:contentDescription="Login Button" />
+
+
 
         <TextView
             android:layout_width="wrap_content"
@@ -94,15 +107,25 @@
             android:textColor="@android:color/white"
             android:textStyle="bold"
             android:textSize="15sp" />
-
         <Button
             android:id="@+id/btnRegister"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="48dp"
             android:layout_gravity="center"
             android:layout_marginTop="8dp"
-            android:backgroundTint="#FF574B"
+            android:paddingHorizontal="24dp"
+            android:minWidth="120dp"
+            android:background="@drawable/button_register_background"
+            android:backgroundTint="@null"
+            android:text="Register"
+            android:textColor="#FFFFFF"
             android:textStyle="bold"
-            android:text="Register" />
+            android:textSize="16sp"
+            android:contentDescription="Register Button" />
+
+
+
+        <!-- Menambahkan deskripsi untuk aksesibilitas -->
+
     </LinearLayout>
 </FrameLayout>
