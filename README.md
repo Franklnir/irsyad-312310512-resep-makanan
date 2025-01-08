@@ -1,7 +1,8 @@
 # penjalasan berupa story board dari resep aplikasi 
 ![figma desain](https://github.com/user-attachments/assets/3f7d5014-5075-409c-90d1-79970deb2f79)
+database
+![image](https://github.com/user-attachments/assets/8cc9a7cb-b9e9-4225-8ec5-5e18255a4b0d)
 
-![Regis4](https://github.com/user-attachments/assets/3fb85382-302f-44e1-aa59-5da53533dd94)
 
 
 1. Layar Login
