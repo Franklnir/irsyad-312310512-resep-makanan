@@ -36,10 +36,10 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="20dp"
             android:gravity="start"
-        android:text="Username"
-        android:textColor="#FFE6E6"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+            android:text="Username"
+            android:textColor="#FFE6E6"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/etUsername"
@@ -62,10 +62,10 @@
             android:layout_marginStart="25dp"
             android:layout_marginTop="20dp"
             android:gravity="start"
-        android:text="Password"
-        android:textColor="#FAE8E8"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+            android:text="Password"
+            android:textColor="#FAE8E8"
+            android:textSize="20sp"
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/etPassword"
