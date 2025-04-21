@@ -1,3 +1,31 @@
 <resources>
-    <string name="app_name">resep makanan</string>
+    <string-array name="recipe_categories">
+        <item>Camilan</item>
+        <item>Kue</item>
+        <item>Masakan</item>
+        <item>Minuman</item>
+        <item>Kuliner</item>
+    </string-array>
+    <string name="username_display">Username: </string>
+    <string name="hint_username">Masukkan username baru</string>
+    <string name="hint_password">Masukkan password baru</string>
+    <string name="hint_phone">Masukkan nomor telepon baru</string>
+    <string name="save_profile">Simpan Profil</string>
+    <string name="help">Bantuan</string>
+    <string name="request">Permintaan</string>
+    <string name="logout">Logout</string>
+
+
+
+
+
+    <string name="hint_recipe_name">Nama Resep</string>
+    <string name="hint_description">Deskripsi</string>
+    <string name="hint_ingredients">Bahan-bahan</string>
+    <string name="hint_steps">Langkah-langkah</string>
+    <string name="hint_video_url">URL Video (opsional)</string>
+    <string name="image_preview_desc">Preview Gambar Resep</string>
+    <string name="btn_choose_image">Pilih Gambar</string>
+    <string name="btn_save_recipe">Simpan Resep</string>
+    <string name="app_name">Project111</string>
 </resources>

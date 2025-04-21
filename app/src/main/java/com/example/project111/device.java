@@ -128,9 +128,10 @@ public class device extends AppCompatActivity {
             return;
         }
 
+        // Menyimpan informasi perangkat ke Firebase dengan path yang sesuai dengan username
         database.child(username).child("device_info").setValue(deviceDetails.toString())
-                .addOnSuccessListener(aVoid -> Toast.makeText(this, "Mulai!", Toast.LENGTH_SHORT).show())
-                .addOnFailureListener(e -> Toast.makeText(this, "Failed to Save Device Info!", Toast.LENGTH_SHORT).show());
+                .addOnSuccessListener(aVoid -> Toast.makeText(this, "Device info saved!", Toast.LENGTH_SHORT).show())
+                .addOnFailureListener(e -> Toast.makeText(this, "Failed to save device info.", Toast.LENGTH_SHORT).show());
     }
 
     private void getLocation() {

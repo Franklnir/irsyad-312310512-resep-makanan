@@ -1,842 +1,208 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
     android:background="#FBF4E2"
     tools:context=".MainActivity">
 
 
-    <ScrollView
-        android:id="@+id/foodContainerScrollView"
+
+    <!-- Scroll keseluruhan halaman -->
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="0dp"
-        android:layout_margin="0dp">
+        android:fillViewport="true">
 
-    <LinearLayout
-            android:id="@+id/foodContainer"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:padding="16dp">
 
-
+            <!-- Profile Row -->
             <LinearLayout
-                android:layout_width="406dp"
-                android:layout_height="185dp"
-                android:layout_margin="4dp"
-                android:layout_marginBottom="4dp"
-                android:background="@drawable/makanan"
-                android:gravity="center_vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                android:padding="4dp"
-                android:paddingBottom="4dp">
+                android:gravity="center_vertical">
 
 
                 <ImageView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/search_background" />
+                    android:id="@+id/profileSmallIcon"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/nnn"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/circle_background"
+                    android:clipToOutline="true"
+                    android:contentDescription="Profile Picture" />
 
                 <TextView
-                    android:layout_width="270dp"
-                    android:layout_height="112dp"
-                    android:layout_marginStart="16dp"
-                    android:fontFamily="sans-serif-medium"
-                    android:text="TEMUKAN RESEP MAKANAN\nDAN KULINER DISINI 🍲"
-                    android:textColor="#FAF6EC"
-                    android:textSize="26sp" />
-
-
-                <FrameLayout
-                    android:layout_width="121dp"
-                    android:layout_height="180dp"
-                    android:layout_margin="4dp"
-                    android:layout_marginBottom="4dp"
-                    android:padding="4dp"
-                    android:paddingBottom="4dp">
-
-                    <!-- Profile Icon -->
-
-                    <ImageView
-                        android:id="@+id/profileIcon"
-                        android:layout_width="135dp"
-                        android:layout_height="45dp"
-                        android:contentDescription="Profile Icon"
-                        android:padding="5dp"
-                        android:src="@drawable/garis3d"
-                        app:tint="#F6E5BA" />
-                </FrameLayout>
-
-
+                    android:id="@+id/usernameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="12dp"
+                    android:text="Halo, Username"
+                    android:textColor="#333333"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
             </LinearLayout>
 
+            <!-- Search Bar -->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="39dp"
-                android:layout_marginTop="8dp"
+                android:layout_height="48dp"
+                android:layout_marginTop="16dp"
                 android:background="@drawable/search_background"
+                android:elevation="4dp"
                 android:gravity="center_vertical"
                 android:orientation="horizontal"
-                android:padding="8dp">
+                android:paddingHorizontal="12dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/search1"
+                    android:tint="#999999" />
 
                 <EditText
                     android:id="@+id/search_bar"
                     android:layout_width="0dp"
-                    android:layout_height="48dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
                     android:layout_weight="1"
                     android:background="@android:color/transparent"
-                    android:hint="Search"
+                    android:hint="Cari resep..."
                     android:inputType="text"
-                    android:paddingHorizontal="16dp"
-                    android:paddingVertical="12dp"
                     android:textColor="#333333"
-                    android:textSize="20dp"
-                    android:textStyle="normal"
-                    tools:ignore="TouchTargetSizeCheck" />
-
-                <ImageView
-                    android:layout_width="34dp"
-                    android:layout_height="39dp"
-                    android:padding="4dp"
-                    android:src="@drawable/search1" />
+                    android:textSize="16sp" />
             </LinearLayout>
 
-
-            <!-- Existing Layout Content -->
-
-            <!-- Existing Layout Content -->
-
-            <!-- Existing Layout Content -->
-
-            <LinearLayout
+            <!-- Filter Buttons -->
+            <HorizontalScrollView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="11dp"
+                android:layout_marginTop="16dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/camilanButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="Camilan"
+                        android:textColor="@android:color/white"
+                        app:backgroundTint="#FFA726"
+                        app:cornerRadius="50dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/KueButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="Kue"
+                        android:textColor="@android:color/white"
+                        app:backgroundTint="#66BB6A"
+                        app:cornerRadius="50dp" />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/MasakanButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="Masakan"
+                        android:textColor="@android:color/white"
+                        app:backgroundTint="#8D6E63"
+                        app:cornerRadius="50dp" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/KulinerButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:text="Kuliner"
+                        android:textColor="@android:color/white"
+                        app:backgroundTint="#42A5F5"
+                        app:cornerRadius="50dp" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/MinumanButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Minuman"
+                        android:textColor="@android:color/white"
+                        app:backgroundTint="#42A5F5"
+                        app:cornerRadius="50dp" />
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Banner -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="185dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/makanan"
                 android:orientation="horizontal"
-                android:gravity="center">
+                android:gravity="center_vertical"
+                android:padding="16dp">
 
-                <Button
-                    android:id="@+id/spicyButton"
+                <TextView
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:layout_marginEnd="4dp"
-                    android:backgroundTint="#FFA726"
-                    android:text="Spicy"
-                    android:textColor="#FFFFFF" />
+                    android:text="TEMUKAN RESEP MAKANAN\nDAN KULINER DISINI 🍲"
+                    android:textColor="#FAF6EC"
+                    android:textSize="24sp"
+                    android:fontFamily="sans-serif-medium" />
 
-                <Button
-                    android:id="@+id/healthyButton"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="4dp"
-                    android:layout_weight="1"
-                    android:backgroundTint="#66BB6A"
-                    android:text="Healthy"
-                    android:textColor="#FFFFFF" />
-
-                <Button
-                    android:id="@+id/veganButton"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:layout_marginEnd="4dp"
-                    android:backgroundTint="#8D6E63"
-                    android:text="Vegan"
-                    android:textColor="#FFFFFF" />
-
-                <Button
-                    android:id="@+id/drinkButton"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:backgroundTint="#42A5F5"
-                    android:text="Drink"
-                    android:textColor="#FFFFFF" />
 
             </LinearLayout>
 
-
-
+            <!-- Section Title -->
             <TextView
-        android:layout_width="155dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="DAFTAR MAKANAN"
+                android:textColor="#333333"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:paddingStart="4dp" />
+
+            <!-- RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:padding="8dp"
+                tools:listitem="@layout/item_recipe" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- FloatingActionButton tetap di luar -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="DAFTAR \nMAKANAN"
-        android:textColor="#333333"
-        android:textSize="16sp"
-        android:textStyle="bold" />
+        android:layout_gravity="bottom|end"
+        android:layout_margin="24dp"
+        android:contentDescription="Tambah Resep"
+        app:backgroundTint="@color/purple_500"
+        app:srcCompat="@drawable/ic_eye"
+        app:tint="@android:color/white" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
 
-
-            <ScrollView
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:padding="0dp"
-                android:layout_margin="0dp">
-
-
-            <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:padding="1dp">
-
-                    <!-- Baris 1: Burger & Rendang -->
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="2"
-                        android:padding="0dp"
-                        android:layout_margin="0dp"
-                        android:baselineAligned="false"> <!-- Ini penting -->
-
-
-                        <LinearLayout
-                            android:id="@+id/foodItemBurger"
-                            android:layout_width="0dp"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:background="@drawable/item_background"
-                            android:orientation="vertical"
-                            android:padding="3dp"
-                            android:layout_margin="4dp"
-                            android:paddingBottom="4dp"
-                            android:layout_marginBottom="4dp">
-
-                            <com.google.android.material.imageview.ShapeableImageView
-                                android:id="@+id/foodImage"
-                                android:layout_width="match_parent"
-                                android:layout_height="140dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/burger1"
-                                app:shapeAppearanceOverlay="@style/RoundedImage" />
-
-                            <TextView
-                                android:id="@+id/foodName1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:fontFamily="sans-serif-medium"
-                                android:text="Burger"
-                                android:textColor="#333333"
-                                android:textSize="16sp" />
-
-                            <TextView
-                                android:id="@+id/foodDescription1"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Delicious beef burger \rfrjftrjf \n refrefrefref \n frjbnejnfjef \n erfe"
-                                android:textColor="#777777"
-                                android:layout_margin="0dp"
-                                android:paddingBottom="0dp"
-                                android:layout_marginBottom="0dp"
-                                android:textSize="14sp" />
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:id="@+id/foodItemRendang"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:background="@drawable/item_background"
-                            android:orientation="vertical"
-                            android:padding="3dp"
-                            android:layout_margin="4dp"
-                            android:paddingBottom="4dp"
-                            android:layout_marginBottom="4dp">
-
-                            <com.google.android.material.imageview.ShapeableImageView
-                                android:id="@+id/foodImage2"
-                                android:layout_width="match_parent"
-                                android:layout_height="140dp"
-                                android:scaleType="centerCrop"
-                                android:src="@drawable/rendang"
-                                app:shapeAppearanceOverlay="@style/RoundedImage" />
-
-                            <TextView
-                                android:id="@+id/foodName2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="8dp"
-                                android:fontFamily="sans-serif-medium"
-                                android:text="Rendang"
-                                android:textColor="#333333"
-                                android:textSize="16sp" />
-
-                            <TextView
-                                android:id="@+id/foodDescription2"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="4dp"
-                                android:text="Khas padang \n di padukan dengan santan yang kental"
-                                android:textColor="#777777"
-                                android:textSize="14sp" />
-                        </LinearLayout>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:orientation="horizontal"
-                        android:weightSum="2"
-                        android:padding="0dp"
-                        android:layout_margin="0dp">
-
-                <LinearLayout
-                    android:id="@+id/foodItemSusuGandum"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/item_background"
-                    android:orientation="vertical"
-                    android:padding="4dp"
-                    android:layout_margin="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_marginBottom="4dp">
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/foodImage3"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/susugandum"
-                        app:shapeAppearanceOverlay="@style/RoundedImage" />
-
-                    <TextView
-                        android:id="@+id/foodName3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="Susu gandum"
-                        android:textColor="#333333"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/foodDescription3"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Minuman sehat \n ecevhrfuvhfbvh \n fhebyehbvcyeuvbue"
-                        android:textColor="#777777"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:id="@+id/foodItemRotiGandum"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:layout_height="wrap_content"
-                    android:background="@drawable/item_background"
-                    android:orientation="vertical"
-                    android:padding="4dp"
-                    android:layout_margin="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_marginBottom="4dp">
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/foodImage4"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/bread"
-                        app:shapeAppearanceOverlay="@style/RoundedImage" />
-
-                    <TextView
-                        android:id="@+id/foodName4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="Roti Gandum"
-                        android:textColor="#333333"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/foodDescription4"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="kenikmatan khas eropa \n rhfbvhvbhejvbiebviek \n fhbehfjbfj"
-                        android:textColor="#777777"
-                        android:textSize="14sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"/>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-
-                <LinearLayout
-                    android:id="@+id/foodItemNasiGoreng"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/item_background"
-                    android:orientation="vertical"
-                    android:padding="4dp"
-                    android:layout_margin="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_marginBottom="4dp">
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/foodImage8"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/nasigoreng"
-                        app:shapeAppearanceOverlay="@style/RoundedImage" />
-
-                    <TextView
-                        android:id="@+id/foodName8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="Nasi goreng thailand"
-                        android:textColor="#333333"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/foodDescription8"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="aroma asia"
-                        android:textColor="#777777"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:id="@+id/foodItemSatePadang"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/item_background"
-                    android:orientation="vertical"
-                    android:padding="4dp"
-                    android:layout_margin="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_marginBottom="4dp">
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/foodImage9"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/satepadang"
-                        app:shapeAppearanceOverlay="@style/RoundedImage" />
-
-                    <TextView
-                        android:id="@+id/foodName9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="sate padang"
-                        android:textColor="#333333"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/foodDescription9"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="dengan bumbu kacang"
-                        android:textColor="#777777"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/foodItemDimsum"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/item_background"
-                    android:orientation="vertical"
-                    android:padding="4dp"
-                    android:layout_margin="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_marginBottom="4dp">
-
-
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/foodImageDimsum"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/dimsumjamur"
-                        app:shapeAppearanceOverlay="@style/RoundedImage" />
-
-                    <TextView
-                        android:id="@+id/foodNameDimsum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="Dimsum jamur"
-                        android:textColor="#333333"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/foodDescriptionDimsum"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Lezat khas Cina"
-                        android:textColor="#777777"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/foodItemSmoothie"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/item_background"
-                    android:orientation="vertical"
-                    android:padding="4dp"
-                    android:layout_margin="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_marginBottom="4dp">
-
-
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/foodImageSmoothie"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/smoothiee"
-                        app:shapeAppearanceOverlay="@style/RoundedImage" />
-
-
-
-                    <TextView
-                        android:id="@+id/foodNameSmoothie"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="Smoothie"
-                        android:textColor="#333333"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/foodDescriptionSmoothie"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Minuman buah sehat"
-                        android:textColor="#777777"
-                        android:textSize="14sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/foodItemAyamBowl"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/item_background"
-                    android:orientation="vertical"
-                    android:padding="4dp"
-                    android:layout_margin="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_marginBottom="4dp">
-
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/foodImageAyamBowl"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/ayambowl"
-                        app:shapeAppearanceOverlay="@style/RoundedImage" />
-
-
-                    <TextView
-                        android:id="@+id/foodNameAyamBowl"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="Ayam Bowl"
-                        android:textColor="#333333"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/foodDescriptionAyamBowl"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Hidangan praktis"
-                        android:textColor="#777777"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/foodItemTumis"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/item_background"
-                    android:orientation="vertical"
-                    android:padding="4dp"
-                    android:layout_margin="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_marginBottom="4dp">
-
-
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/foodImageTumis"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/tumisseafood"
-                        app:shapeAppearanceOverlay="@style/RoundedImage" />
-
-
-
-                    <TextView
-                        android:id="@+id/foodNameTumis"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="Tumis Sayur"
-                        android:textColor="#333333"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/foodDescriptionTumis"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Sehat dan bergizi"
-                        android:textColor="#777777"
-                        android:textSize="14sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/foodItemCapcay"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/item_background"
-                    android:orientation="vertical"
-                    android:padding="4dp"
-                    android:layout_margin="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_marginBottom="4dp">
-
-
-
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/foodImageSushi"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/capcay"
-                        app:shapeAppearanceOverlay="@style/RoundedImage" />
-
-
-                    <TextView
-                        android:id="@+id/foodNameSushi"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="Capcay"
-                        android:textColor="#333333"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/foodDescriptionSushi"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Hidanagan sayuran"
-                        android:textColor="#777777"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/foodItemStreetBoba"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/item_background"
-                    android:orientation="vertical"
-                    android:padding="4dp"
-                    android:layout_margin="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_marginBottom="4dp">
-
-
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/foodImageBurger"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/streetboba"
-                        app:shapeAppearanceOverlay="@style/RoundedImage" />
-
-                    <TextView
-                        android:id="@+id/foodNameBurger"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="street Boba"
-                        android:textColor="#333333"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/foodDescriptionBurger"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="Rasakan setiap gula aren "
-                        android:textColor="#777777"
-                        android:textSize="14sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:id="@+id/foodItemBakpao"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/item_background"
-                    android:orientation="vertical"
-                    android:padding="4dp"
-                    android:layout_margin="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_marginBottom="4dp">
-
-
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/foodImagePizza"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/bakpao"
-                        app:shapeAppearanceOverlay="@style/RoundedImage" />
-
-
-                    <TextView
-                        android:id="@+id/foodNamePizza"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="Bakpao Ayam"
-                        android:textColor="#333333"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/foodDescriptionPizza"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="hidangan musim dingin"
-                        android:textColor="#777777"
-                        android:textSize="14sp" />
-                </LinearLayout>
-
-                <LinearLayout
-                    android:id="@+id/foodItemBoluLapis"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:background="@drawable/item_background"
-                    android:orientation="vertical"
-                    android:padding="4dp"
-                    android:layout_margin="4dp"
-                    android:paddingBottom="4dp"
-                    android:layout_marginBottom="4dp">
-
-
-
-                    <com.google.android.material.imageview.ShapeableImageView
-                        android:id="@+id/foodImageSteak"
-                        android:layout_width="match_parent"
-                        android:layout_height="140dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/talasbogor"
-                        app:shapeAppearanceOverlay="@style/RoundedImage" />
-
-                    <TextView
-                        android:id="@+id/foodNameSteak"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="8dp"
-                        android:fontFamily="sans-serif-medium"
-                        android:text="talas Bogor"
-                        android:textColor="#333333"
-                        android:textSize="16sp" />
-
-                    <TextView
-                        android:id="@+id/foodDescriptionSteak"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="4dp"
-                        android:text="dengan talas bogor \n creamy "
-                        android:textColor="#777777"
-                        android:textSize="14sp" />
-                </LinearLayout>
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
-        </LinearLayout>
-    </ScrollView>
-</LinearLayout>
