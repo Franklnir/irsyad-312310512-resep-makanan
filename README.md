@@ -1,6 +1,9 @@
-# penjalasan berupa story board dari resep aplikasi 
-![Untitled](https://github.com/user-attachments/assets/473527c5-e454-468f-b70d-64d02cc4c477)
-![Regis4](https://github.com/user-attachments/assets/3fb85382-302f-44e1-aa59-5da53533dd94)
+# penjalasan berupa story board UI dari resep aplikasi 
+![figma desain](https://github.com/user-attachments/assets/3f7d5014-5075-409c-90d1-79970deb2f79)
+## database firebase realtime :
+# register pengguna akan tersimpan berserta informasi perangkat yang di gunakannya seperti di bawah ini
+![image](https://github.com/user-attachments/assets/8cc9a7cb-b9e9-4225-8ec5-5e18255a4b0d)
+
 
 
 1. Layar Login
@@ -10,7 +13,7 @@ o	Kolom input: Username dan Password.
 o	Tombol: LOGIN dan Register.
 o	Tautan: belom punya akun?.
 •	Desain: Latar bertema makanan dengan tata letak sederhana untuk kolom input.
-•	Catatan: Pengguna memasukkan detail login untuk mengakses aplikasi.
+•	Catatan: setelah pengguna login maka akan menekan tombol lanjut untuk memasukin menu utama.
 
 2. Layar Registrasi
 •	Deskripsi: Tampilan untuk pengguna baru mendaftar akun.
@@ -51,14 +54,15 @@ o	Instruksi: Langkah-langkah membuat, mulai dari mencampur, mendiamkan, membentu
 7. Layar Profil
 •	Deskripsi: Halaman profil pengguna untuk melihat atau mengelola informasi akun dan melihat data register.
 •	Elemen:
-o	Kolom Informasi: Menampilkan username, dan nomor HP.
-o	Tombol: Logout, Help me dan request resep.
-(tombol logout akan menghapus data register dan keluar), (tombol help me akan mengarahkan ke whatstup admin), (tombol request resep akan ke whatsup untuk kerja sama dll)
+o	Kolom Informasi: Menampilkan username, password dan nomor HP.
+o	Tombol: Logout, Help me, logou dan save.
+(tombol logout akan menghapus data register dan keluar), (tombol help me akan mengarahkan ke whatstup admin), (tombol save untuk menyimpan perubahan data akun)
 •	Catatan: Memudahkan pengguna untuk mengelola informasi profil.
-pengguna bisa logout dan helpme melalui butoon di bawah
+pengguna bisa logout dan helpme melalui butoon di bawah, pengguna bisa menegdit akun aplikasi menyimpannya
 
 Catatan 
-•	Tema khas Aplikasi: Menggunakan latar visual bertema makanan yang konsisten untuk pengalaman yang menarik dan intuitif.
+•	Tema Aplikasi: Menggunakan latar visual bertema makanan untuk pengalaman yang menarik dan intuitif.
 •	Penambahan Resep: Resep dalam aplikasi dapat terus diperbarui atau ditambah sesuai kebutuhan aja
+# (( aplikasi bisa mendeteksi perangkat pengguna dan menyimpan informasi perangkat supaya ketika user keluar aplikasi lalu masuk aplikasi lagi tidak perlu login ulang tapi langsung di arahkan ke menu utama ))
 
 

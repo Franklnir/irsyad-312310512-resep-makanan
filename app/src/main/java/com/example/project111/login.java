@@ -70,23 +70,25 @@ public class login extends AppCompatActivity {
             return;
         }
 
+        // Access the database using the username
         database.child(username).addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if (snapshot.exists()) {
+                    // Get password stored in the database
                     String dbPassword = snapshot.child("password").getValue(String.class);
                     if (dbPassword != null && dbPassword.equals(password)) {
                         // Save login status to SharedPreferences
                         SharedPreferences preferences = getSharedPreferences("UserData", MODE_PRIVATE);
                         SharedPreferences.Editor editor = preferences.edit();
                         editor.putBoolean("isLoggedIn", true);
-                        editor.putString("username", username);
+                        editor.putString("username", username); // Save username to preferences
                         editor.apply();
 
                         // Redirect to device activity and pass username
                         Toast.makeText(getApplicationContext(), "Login Berhasil", Toast.LENGTH_SHORT).show();
                         Intent deviceIntent = new Intent(login.this, device.class);
-                        deviceIntent.putExtra("username", username); // Kirim username ke device.java
+                        deviceIntent.putExtra("username", username); // Pass username to device activity
                         startActivity(deviceIntent);
                         finish();
                     } else {

@@ -1,6 +1,5 @@
 package com.example.project111;
 
-
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,19 +20,20 @@ public class register extends AppCompatActivity {
 
     private DatabaseReference database;
 
-
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        // Inisialisasi elemen UI
         etUsername = findViewById(R.id.etusername);
         etPassword = findViewById(R.id.etpassword);
         etKonfirmasi = findViewById(R.id.etkonfirmasi);
         etNomorHp = findViewById(R.id.etnomorhp);
         btnRegister = findViewById(R.id.btnregister);
 
+        // Inisialisasi Firebase Database
         database = FirebaseDatabase.getInstance().getReferenceFromUrl("https://project111-aa20b-default-rtdb.firebaseio.com/");
 
         btnRegister.setOnClickListener(new View.OnClickListener() {
@@ -45,19 +45,25 @@ public class register extends AppCompatActivity {
                 String konfirmasi = etKonfirmasi.getText().toString().trim();
                 String nomorHp = etNomorHp.getText().toString().trim();
 
+                // Validasi input
                 if (username.isEmpty() || password.isEmpty() || konfirmasi.isEmpty() || nomorHp.isEmpty()) {
                     Toast.makeText(getApplicationContext(), "Ada Data Yang Masih Kosong!!", Toast.LENGTH_SHORT).show();
                 } else if (!password.equals(konfirmasi)) {
                     Toast.makeText(getApplicationContext(), "Konfirmasi Password Tidak Sesuai!!", Toast.LENGTH_SHORT).show();
                 } else {
-                    database = FirebaseDatabase.getInstance().getReference("users");
-                    database.child(username).child("username").setValue(username);
-                    database.child(username).child("password").setValue(password);
-                    database.child(username).child("nomorHp").setValue(nomorHp);
+                    // Simpan data ke Firebase
+                    DatabaseReference userRef = FirebaseDatabase.getInstance().getReference("users").child(username);
+                    userRef.child("userId").setValue(username); // userId diisi dengan username
+                    userRef.child("username").setValue(username);
+                    userRef.child("password").setValue(password);
+                    userRef.child("nomorHp").setValue(nomorHp);
 
                     Toast.makeText(getApplicationContext(), "Register Berhasil", Toast.LENGTH_SHORT).show();
+
+                    // Pindah ke halaman login
                     Intent register = new Intent(getApplicationContext(), login.class);
                     startActivity(register);
+                    finish(); // Opsional, agar tidak bisa kembali ke halaman register
                 }
             }
         });

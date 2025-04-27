@@ -1,107 +1,387 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp"
-    android:background="#FBD586">
-
-
-    <ImageView
-        android:id="@+id/profile_image"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_gravity="center"
-        android:background="@drawable/nnn"
-        android:contentDescription="Profile Picture"
-        android:src="@drawable/nnn" />
-
-
-    <TextView
-        android:id="@+id/username_label"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="8dp"
-        android:text="profile"
-        android:textColor="@android:color/black"
-        android:textSize="20sp"
-        android:textStyle="bold" />
+    android:background="@drawable/item_background2">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="465dp"
-        android:layout_marginTop="1dp"
-        android:background="@drawable/burger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="16dp">
+        android:padding="16dp"
+        android:gravity="center_horizontal">
 
+        <!-- Profile Image -->
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center"
+            android:src="@drawable/nnn"
+            android:scaleType="centerCrop"
+            android:background="@drawable/circle_background"
+            android:clipToOutline="true"
+            android:contentDescription="Profile Picture" />
 
-        <EditText
-            android:id="@+id/edit_username"
-            android:layout_width="match_parent"
+        <!-- Username -->
+        <TextView
+            android:id="@+id/username_label"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="#7BFFFFFF"
-            android:hint="Nama Pengguna"
-            android:inputType="text"
-            android:minHeight="48dp" />
+            android:layout_marginTop="8dp"
+            android:text="WILIAM SNOE"
+            android:textColor="@android:color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
 
-
+        <!-- Photos, Followers, Following -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:gravity="center_vertical"
-            android:orientation="horizontal">
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:weightSum="3">
 
-            <EditText
-                android:id="@+id/edit_password"
+            <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:background="#80FFFFFF"
-                android:hint="Password"
-                android:inputType="textPassword"
-                android:minHeight="48dp" />
+                android:orientation="vertical"
+                android:gravity="center">
 
-            <ImageView
-                android:id="@+id/mata_hide"
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="8dp"
-                android:contentDescription="Toggle Password Visibility"
-                android:src="@drawable/ic_eye" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="160"
+                    android:textColor="#00BCD4"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Photos"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2254"
+                    android:textColor="#00BCD4"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Followers"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="520"
+                    android:textColor="#00BCD4"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Following"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Contact Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/edit_username"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:background="@drawable/edittext_background"
+                android:drawableLeft="@android:drawable/ic_dialog_email"
+                android:enabled="false"
+                android:hint="Wiliam@gmail.com"
+                android:inputType="textEmailAddress"
+                android:paddingStart="16dp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edit_phone"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/edittext_background"
+                android:drawableLeft="@android:drawable/ic_menu_call"
+                android:enabled="false"
+                android:hint="+222 220 222"
+                android:inputType="phone"
+                android:paddingStart="16dp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/edit_password"
+                    android:layout_width="0dp"
+                    android:layout_height="56dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/edittext_background"
+                    android:drawableLeft="@android:drawable/ic_menu_add"
+                    android:enabled="false"
+                    android:hint="Add to Groups"
+                    android:paddingStart="16dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:id="@+id/mata_hide"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_eye"
+                    android:visibility="gone" />
+            </LinearLayout>
         </LinearLayout>
 
 
-        <EditText
-            android:id="@+id/edit_phone"
+
+        <Button
+            android:id="@+id/btn_save"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="#4CAF50"
+            android:text="Save"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
+
+        <!-- Pengaturan Title -->
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Pengaturan"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black" />
+
+        <!-- Daftar Menu -->
+        <LinearLayout
+            android:id="@+id/menuList"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:background="#77FFFFFF"
-            android:hint="Nomor Telepon"
-            android:inputType="phone"
-            android:minHeight="48dp" />
+            android:orientation="vertical">
 
+
+
+            <!-- Item Menu 2 -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_eye"
+                        android:layout_marginEnd="16dp" />
+
+                    <Button
+                        android:id="@+id/itemVerification"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:text="Verifikasi Data Diri"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:gravity="start|center_vertical"
+                        android:padding="0dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+            <!-- Item Menu 3 (contoh favorit) -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_eye"
+                        android:layout_marginEnd="16dp" />
+
+                    <Button
+                        android:id="@+id/itemRiwayat"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:text="Riwayat"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:gravity="start|center_vertical"
+                        android:padding="0dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_eye"
+                        android:layout_marginEnd="16dp" />
+
+                    <Button
+                        android:id="@+id/itemFavorit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:text="Favorit"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:gravity="start|center_vertical"
+                        android:padding="0dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/ic_eye"
+                        android:layout_marginEnd="16dp" />
+
+                    <Button
+                        android:id="@+id/itemBantuan"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@android:color/transparent"
+                        android:text="Bantuan"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black"
+                        android:gravity="start|center_vertical"
+                        android:padding="0dp" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+        <!-- Buttons -->
+        <Button
+            android:id="@+id/btn_request"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#00BCD4"
+            android:text="FOLLOW ME"
+            android:textColor="@android:color/white"
+            android:textStyle="bold" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
             android:layout_marginTop="16dp"
             android:orientation="horizontal"
             android:weightSum="2">
 
-
             <Button
                 android:id="@+id/btn_logout"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:backgroundTint="@android:color/holo_red_light"
+                android:backgroundTint="#FB3F3F"
                 android:text="Logout"
-                android:textColor="@android:color/white" />
-
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/btn_help"
@@ -111,32 +391,12 @@
                 android:layout_weight="1"
                 android:backgroundTint="@android:color/holo_green_light"
                 android:text="Help Me"
-                android:textColor="@android:color/white" />
-
+                android:textColor="@android:color/white"
+                android:textStyle="bold" />
         </LinearLayout>
-
-
-        <!-- New Save button added here -->
-        <Button
-            android:id="@+id/btn_save"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="#4CAF50"
-            android:text="Save "
-            android:textColor="@android:color/white" />
 
 
     </LinearLayout>
 
 
-    <Button
-        android:id="@+id/btn_request"
-        android:layout_width="379dp"
-        android:layout_height="66dp"
-        android:layout_marginStart="1dp"
-        android:layout_weight="1"
-        android:backgroundTint="#F6BC16"
-        android:text="Info device"
-        android:textColor="@android:color/white" />
-</LinearLayout>
+</ScrollView>
